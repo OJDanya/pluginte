@@ -2,8 +2,8 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "corporate-assistant",
   "version": "0.1.0",
-  "description": "Навыки для деловой переписки, встреч и служебных записок.",
-  "extensions": { "com.openai": { "interface": {
+  "description": "Навыки для деловой переписки и локальные MCP для GitHub и Atlassian.",
+  "extensions": { "com.openai": { "requires_local_executor": true, "interface": {
     "displayName": "Корпоративный помощник",
     "shortDescription": "Письма, встречи и служебные записки",
     "developerName": "Corporate Skills",
