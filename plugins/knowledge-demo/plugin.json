@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "knowledge-demo",
+  "version": "0.1.0",
+  "description": "Демонстрационная база знаний вымышленной компании.",
+  "extensions": { "com.openai": { "interface": {
+    "displayName": "Демо база знаний",
+    "shortDescription": "Тестовые корпоративные сведения",
+    "developerName": "Corporate Skills",
+    "category": "Productivity"
+  } } }
+}
