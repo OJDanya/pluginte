@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "github-local": {
+      "type": "stdio",
+      "command": "github-mcp-server",
+      "args": ["--read-only", "stdio"]
+    },
+    "atlassian-local": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
+      "env": { "READ_ONLY_MODE": "true" }
+    }
+  }
+}
