@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "corporate-assistant",
+  "version": "0.1.0",
+  "description": "Навыки для деловой переписки, встреч и служебных записок.",
+  "extensions": { "com.openai": { "interface": {
+    "displayName": "Корпоративный помощник",
+    "shortDescription": "Письма, встречи и служебные записки",
+    "developerName": "Corporate Skills",
+    "category": "Productivity"
+  } } }
+}
