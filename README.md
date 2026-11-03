@@ -14,4 +14,12 @@ codex plugin marketplace add OJDanya/pluginte
 
 Примеры: «Подготовь деловой ответ на это письмо», «Составь итоги встречи по заметкам», «Подготовь краткий статус для руководителя».
 
-Публичный репозиторий доступен всем: не добавляйте в него секреты и внутренние документы.
+## Локальные MCP-серверы
+
+Плагин содержит конфигурацию двух серверов для настольного Codex: официального GitHub MCP и стороннего MCP Atlassian. Оба настроены только на чтение. Серверы запускаются локально, но обращаются к GitHub и Atlassian по сети. Их программы и учётные данные не входят в репозиторий.
+
+1. Установите [GitHub MCP Server](https://github.com/github/github-mcp-server) и добавьте исполняемый файл `github-mcp-server` в PATH. Для Atlassian установите [uv](https://docs.astral.sh/uv/getting-started/installation/): команда `uvx mcp-atlassian` загрузит и запустит пакет при первом использовании. Нужны доступ к сети и, для корпоративного сервера, при необходимости VPN.
+2. Настройте переменные окружения пользователя на своём компьютере, не записывая секреты в репозиторий. Для GitHub задайте `GITHUB_PERSONAL_ACCESS_TOKEN` с правами на нужные репозитории. Для Confluence Cloud задайте `CONFLUENCE_URL` (например, `https://company.atlassian.net/wiki`), `CONFLUENCE_USERNAME` и `CONFLUENCE_API_TOKEN`. Для Confluence Server/Data Center задайте `CONFLUENCE_URL` и `CONFLUENCE_PERSONAL_TOKEN`. Для Jira аналогично используются `JIRA_URL`, `JIRA_USERNAME`, `JIRA_API_TOKEN` для Cloud или `JIRA_URL`, `JIRA_PERSONAL_TOKEN` для Server/Data Center. Подключайте только нужные сервисы.
+3. Полностью перезапустите приложение, чтобы оно получило переменные окружения, обновите маркетплейс и плагин и откройте новый чат. Попробуйте найти доступную страницу Confluence или прочитать доступный репозиторий GitHub. Доступность переменных окружения зависит от среды запуска Codex; если сервер не получает их, настройте передачу переменных в вашей среде.
+
+Для подробностей см. [настройку MCP Atlassian](https://mcp-atlassian.soomiles.com/docs/configuration) и [авторизацию](https://mcp-atlassian.soomiles.com/docs/authentication). Не отправляйте токены в чат и не добавляйте их в файлы плагина. Если репозиторий станет публичным, его содержимое будет доступно всем.
