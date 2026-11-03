@@ -1,0 +1,10 @@
+{
+  "name": "corporate-skills",
+  "interface": { "displayName": "Корпоративные навыки" },
+  "plugins": [{
+    "name": "corporate-assistant",
+    "source": { "source": "local", "path": "./plugins/corporate-assistant" },
+    "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+    "category": "Productivity"
+  }]
+}
